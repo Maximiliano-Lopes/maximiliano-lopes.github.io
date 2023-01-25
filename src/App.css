@@ -1,38 +1,1320 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Anonymous Pro", monospace;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url(./images/backgroundImage.png);
+  background-size: 100%;
+  background-attachment: fixed;
+  padding: 1.5vw;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.icon {
+  width: 5vh;
+  margin-right: 1vh;
+}
+#StyleIcon {
+  background-color: white;
+}
+main {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+nav {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+nav ul {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  
+}
+nav ul li{
+  transition: 0.3s;
+}
+nav ul li:hover{
+  font-size: +110%;
+  transition: 0.3s;
+  text-shadow: white 3px 3px 50px;
+}
+
+.backgroundCard {
+  background-color: #12003497;
+  box-shadow: white 2px 2px 1px;
+  padding: 2vh;
+  border-radius: 15px;
+}
+#HabilitiesSection {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  width: 70%;
+  margin-top: 20%;
+}
+
+#habilitiesTitle + p {
+  margin-top: 0%;
+  margin-bottom: -5%;
+}
+#HabilitiesSection div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  align-self: center;
+  margin-top: 10%;
+}
+#FrontEndCard span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+}
+#FrontEndCard span img {
+  padding: 1vw;
+}
+#ProjectsSection {
+  margin-top: 10vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85vw;
+}
+
+.ProjectCard {
+  height: 26vh;
+  width: 34vw;
+  float: left;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 2em;
+}
+.ProjectCard img {
+  width: 34vw;
+  height: 34vw;
+  filter: blur(5px);
+  -webkit-filter: blur(0.5px);
+  border-radius: 15px;
+}
+.ProjectCard p {
+  margin-top: 0.2em;
+  margin-bottom: 1.2em;
   text-align: center;
 }
+.btnShow {
+  background-color: white;
+  width: max-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 1vw 3vw 1vw 3vw;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  color: #120034;
+}
+#areaToCards {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cardTitle {
+  margin-bottom: 4vh;
+}
+#QualificationsSection {
+  margin-top: 10vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#QualificationsSection ol {
+  list-style: none;
+}
+#QualificationsSection ol li::marker {
+  font-size: 10vw;
+}
+.dottedBar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.dottedBar:before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  background: rgba(255, 255, 255, 0);
+  border-left: dotted 2px rgb(255, 255, 255);
+  position: absolute;
+  left: -4px;
+  top: 5px;
+  height: calc(100% - 10px);
+}
+.dottedBar li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+.dottedBar li:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#AcademicExp,
+#ProfessionalExp {
+  width: 90%;
+  margin-bottom: 10%;
+}
+#AcademicExp h1,
+#ProfessionalExp h1 {
+  margin-bottom: 10%;
+  text-align: center;
+}
+#ContactSection {
+  margin-top: 6vh;
+  margin-bottom: 15vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+#ContactSection span {
   display: flex;
+  flex-direction: row;
+  width: 60vw;
+  height: 10vh;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+#ContactSection p {
+  margin-top: -5%;
+  margin-bottom: 5%;
+  font-size: 2.2vh;
+}
+footer {
+  width: 100%;
+  height: max-content;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  list-style: none;
+  justify-content: space-between;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  background-color: #12003494;
+  border-radius: 15px;
+  top: 10%;
+  bottom: -5%;
 }
-
-.App-link {
-  color: #61dafb;
+footer ul {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  width: 90%;
+  height: 10vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer ul li {
+  margin-bottom: 1.5vh;
+}
+footer h1 {
+  margin-bottom: 1.5vh;
+}
+#footerNote {
+  margin-top: 15%;
+  margin-bottom: -5%;
+  color: rgb(171, 171, 171);
+  font-style: italic;
+}
+#RightCard a{
+  transition: .3s;
+}
+#RightCard a:hover{
+  background-color: rgba(255, 255, 255, 0.734);
+  transform: translateY(-5%);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  nav {
+    width: 98vw;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+  }
+  nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    justify-content: space-between;
+    font-size: 4vw;
+    width: 95vw;
+    background: #120034cf;
+    border-radius: 10px;
+  }
+  #firstCards {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+  }
+  #leftCard {
+    width: 80%;
+    text-align: left;
+  }
+  #leftCardTitle {
+    font-size: 3.5vh;
+    color: #d8d5db;
+    font-weight: bold;
+    margin-bottom: 0%;
+    text-align: left;
+  }
+  #leftCardText {
+    font-size: 2.5vh;
+  }
+  #socialContent {
+    margin-left: 0%;
+  }
+  #socialContent img {
+    width: 5vh;
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+
+  #RightCard {
+    display: none;
+  }
+  #FrontEndCard span,#BackEndCard span,#FerramentasCard span, #IdiomasCard span{
+    display: inline-flex;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    width: 70%;
+    align-items: flex-start;
+    font-size: 2vh;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+    background: #1200346c;
+    border-radius: 15px;
+    width: 98vw;
+  }
+  nav h1 {
+    font-size: 3.5vw;
+  }
+  nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    justify-content: space-around;
+    font-size: 2.5vw;
+    width: 60vw;
+
+  }
+  .cardTitle {
+    font-size: 4vh;
+    color: #d8d5db;
+    font-weight: bold;
+  }
+  #habilitiesTitle{
+    margin-bottom: 0%;
+  }
+  #habilitiesTitle + p{
+    font-size: 2vh;
+  }
+  #firstCards {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+  }
+  #leftCard {
+    width: 40%;
+    text-align: left;
+    
+  }
+  #leftCardTitle {
+    font-size: 3vh;
+    color: #d8d5db;
+    font-weight: bold;
+  }
+  #leftCardText {
+    font-size: 2.5vh;
+  }
+  #socialContent {
+    margin-left: 5%;
+  }
+  #socialContent img {
+    width: 5vh;
+    margin-top: 3%;
+  }
+  #RightCard {
+    width: 40%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #RightCard img{
+    max-width: 20em; 
+    height: auto; 
+
+  }
+  #RightCard a{
+    margin-top: 5%;
+    font-size: 2vh;
+    font-weight: 900;
+  }
+  #HabilitiesSection {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #HabilitiesSection div div{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: nowrap;
+    width: 40vw;
+    height: 20vh;
+  }
+  #HabilitiesSection p{
+    margin-bottom: -15%;
+  }
+  #FrontEndCard h1{
+    margin-top: 0;
+  }
+  #FrontEndCard span,#BackEndCard span,#FerramentasCard span, #IdiomasCard span{
+    display: inline-flex;
+    margin-bottom: 10%;
+    width: 90%;
+    align-items: flex-start;
+    font-size: 2.5vh;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+#IdiomasCard span p{
+  margin-top: -12%;
+}
+  span #figmaIcon{
+    width: 3.4vh;
+  }
+  .ProjectCard{
+    width: 32vw;
+    height: 37vh;
+    max-height: 400px;
+  }
+  .ProjectCard img{
+    width: 30vw;
+  }
+  .ProjectCard p{
+    font-size: 2vh;
+  }
+  .ProjectCard a{
+    font-size: 2vh;
+    font-weight: 900;
+  }
+  
+  
+  #QualificationsSection ol {
+    list-style: none;
+    font-size: 3.5vw;
+  }
+  .dottedBar li:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    border-radius: 10px;
+  }
+  footer ul li{
+    font-size: 2.1vh;
+  }
+}
+
+/* Medium devices (landscape tablets, 820px and up) */
+@media only screen and (min-width: 820px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+    background: #1200346c;
+    border-radius: 15px;
+    width: 98vw;
+  }
+  nav h1 {
+    font-size: 3.5vw;
+  }
+  nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    justify-content: space-around;
+    font-size: 2.5vw;
+    width: 60vw;
+
+  }
+  .cardTitle {
+    font-size: 4vh;
+    color: #d8d5db;
+    font-weight: bold;
+  }
+  #habilitiesTitle{
+    margin-bottom: 0%;
+  }
+  #habilitiesTitle + p{
+    font-size: 2vh;
+  }
+  #firstCards {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+  }
+  #leftCard {
+    width: 40%;
+    text-align: left;
+    
+  }
+  #leftCardTitle {
+    font-size: 3vh;
+    color: #d8d5db;
+    font-weight: bold;
+  }
+  #leftCardText {
+    font-size: 2.5vh;
+  }
+  #socialContent {
+    margin-left: 5%;
+  }
+  #socialContent img {
+    width: 5vh;
+    margin-top: 3%;
+  }
+  #RightCard {
+    width: 40%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #RightCard img{
+    max-width: 20em; 
+    height: auto; 
+
+  }
+  #RightCard a{
+    margin-top: 5%;
+    font-size: 2vh;
+    font-weight: 900;
+  }
+  #HabilitiesSection {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #HabilitiesSection div div{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: nowrap;
+    width: 40vw;
+    height: 20vh;
+  }
+  #HabilitiesSection p{
+    margin-bottom: -15%;
+  }
+  #FrontEndCard h1{
+    margin-top: 0;
+  }
+  #FrontEndCard span,#BackEndCard span,#FerramentasCard span, #IdiomasCard span{
+    margin-bottom: 10%;
+    width: 90%;
+    font-size: 2vh;
+  }
+  .ProjectCard{
+    width: 32vw;
+    height: 38vh;
+  }
+  .ProjectCard img{
+    width: 30vw;
+  }
+  .ProjectCard p{
+    font-size: 2vh;
+  }
+  .ProjectCard a{
+    font-size: 2vh;
+    font-weight: 900;
+  }
+  
+  
+  #QualificationsSection ol {
+    list-style: none;
+    font-size: 3.5vw;
+  }
+  .dottedBar li:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    border-radius: 10px;
+  }
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  nav::after{
+    content: " ";
+    border-right: solid white 3px;
+    border-top: solid white 3px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    transform: rotate(135deg);
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    display: block;
+    margin-left: 9%;
+    margin-top: 78rem;
+  }
+  nav {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-around;
+    margin-top: 1vh;
+    margin-bottom: 15vh;
+  }
+  nav h1 {
+    font-size: 2.5vw;
+    align-items: center;
+    text-align: center;
+    line-height: 0;
+  }
+  nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 50vw;
+    font-size: 1.5vw;
+    list-style: none;
+    justify-content: space-between;
+  }
+  nav li {
+    cursor: pointer;
+  }
+  #firstCards {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+  }
+  #leftCard {
+    width: 45%;
+
+    text-align: left;
+    
+  }
+  #leftCardTitle {
+    padding-left: 1vw;
+    font-size: 6vh;
+    color: #d8d5db;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  #leftCardText {
+    padding: 1vw;
+    font-size: 5vh;
+  }
+  #socialContent {
+    margin-left: 2%;
+  }
+  #socialContent img {
+    width: 7vh;
+    margin-top: 3%;
+    margin-right: 1vw;
+  }
+  #RightCard {
+    width: 40%;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #RightCard img{
+    max-width: 25em; 
+    height: auto; 
+
+  }
+  #RightCard a{
+    margin-top: 5%;
+    font-size: 3vh;
+    font-weight: 900;
+  }
+
+  .ProjectCard{
+    width: 32vw;
+    height: 40vh;
+  }
+  .ProjectCard img{
+    width: 30vw;
+  }
+  .ProjectCard p{
+    font-size: 2vh;
+  }
+  .ProjectCard a{
+    font-size: 2vh;
+    font-weight: 900;
+  }
+  #habilitiesTitle{
+    font-size: 6vh;
+  }
+  #habilitiesTitle + p{
+    font-size: 3.5vh;
+  }
+  #HabilitiesSection {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #HabilitiesSection div div{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: nowrap;
+    width: 25vw;
+    height: 25vh;
+  }
+  #areaCardHabilities{
+  display: flex;
+  justify-content: center;
+  flex-direction: row !important;
+  align-content: center;
+  align-items: center;
+  width: 80% !important;
+  align-self: center;
+  margin-top: 10%;
+  flex-wrap: wrap;
+}
+#areaCardHabilities div{
+  margin-left: 2vw;
+  font-size: 2.5vh;
+}
+
+#IdiomasCard p{
+ font-size: 4vh !important;
+}
+
+  #HabilitiesSection p{
+    margin-bottom: -15%;
+  }
+  #FrontEndCard h1{
+    margin-top: 1em;
+  }
+  #FrontEndCard span,#BackEndCard span,#FerramentasCard span, #IdiomasCard span{
+    display: inline-flex;
+    margin-bottom: 10%;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: 2vh;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 1vh;
+}
+  #FrontEndCard #StyleIcon, #figmaIcon{
+    align-self: center;
+    padding: 0;
+    width: 3.2vw;
+  }
+  #areaCardHabilities div .icon{
+    width: 3vw;
+  }
+  #figmaIcon{
+    align-self: center;
+    padding: 0;
+    width: 2.4vw !important;
+  }
+  #QualificationsSection ol {
+    list-style: none;
+    font-size: 3.5vw;
+  }
+  .dottedBar li:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    border-radius: 10px;
+  }
+  #areaToCards{
+    width: 100%;
+  }
+  #ProjectsSection{
+    width: 100%;
+  }
+  #ProjectsSection .cardTitle{
+    font-size: 6vh;
+  }
+  .ProjectCard{
+    width: 20vw;
+    height: 50vh;
+    margin-top: 5vh;
+    transition: 0.3s;
+  }
+  .ProjectCard img{
+    width: 20vw;
+    height: 30vh;
+    overflow: hidden;
+  }
+  .ProjectCard p{
+    margin-top: 2vh;
+    font-size: 3.5vh;
+  }
+  .ProjectCard a{
+    font-size: 3vh;
+    font-weight: 900;
+    transition: 0.2s;
+  }
+  .ProjectCard:hover{
+    transform:translateY(-5%);
+  
+  }
+  .ProjectCard a:hover{
+    transform: translateY(-5%);
+    background-color: rgba(255, 255, 255, 0.734);
+  }
+  #QualificationsSection ol {
+    list-style: none;
+    width: fit-content;
+    font-size: 2vw;
+  }
+  #QualificationsSection .cardTitle{
+    font-size: 5vh;
+  }
+
+  #ContactSection{
+    margin-top: 6vh;
+    margin-bottom: 15vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 60vw;
+  }
+  #ContactSection  .cardTitle{
+    font-size: 6vh;
+  }
+  #ContactSection span {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    height: 15vh;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+  }
+  #ContactSection span img{
+    width: 5vw;
+    transition: .3s;
+  }
+  #ContactSection span img:hover{
+    transform: translateY(-15%);
+  }
+  #ContactSection p {
+    margin-top: -3%;
+    margin-bottom: 5%;
+    font-size: 4vh;
+  }
+  footer ul{
+    margin-top: 4vh;
+  }
+  footer ul li {
+    margin-bottom: 2.5vh;
+    font-size: 4vh;
+    transition: .3s;
+  }
+  footer ul li:hover{
+    font-size: 4.5vh;
+    transition: 0.3s;
+    text-shadow: white 3px 3px 50px;
+  }
+  footer h1 {
+    margin-bottom: 2.5vh;
+  }
+  #footerNote {
+    margin-top: 20%;
+    margin-bottom: -5%;
+    color: rgb(171, 171, 171);
+    font-style: italic;
+    font-size: 2.5vh;
+  }
+}
+@media only screen and (min-width: 1500px) {
+
+  nav::after{
+    content: " ";
+    border-right: solid white 3px;
+    border-top: solid white 3px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    transform: rotate(135deg);
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    display: block;
+    margin-left: 9%;
+    margin-top: 92rem;
+  }
+  nav {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-around;
+    margin-top: 1vh;
+    margin-bottom: 15vh;
+  }
+  nav h1 {
+    font-size: 2.5vw;
+    align-items: center;
+    text-align: center;
+    line-height: 0;
+  }
+  nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 50vw;
+    font-size: 1.5vw;
+    list-style: none;
+    justify-content: space-between;
+  }
+  nav li {
+    cursor: pointer;
+  }
+  #firstCards {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+  }
+  #leftCard {
+    width: 45%;
+
+    text-align: left;
+    
+  }
+  #leftCardTitle {
+    padding-left: 1vw;
+    font-size: 6vh;
+    color: #d8d5db;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  #leftCardText {
+    padding: 1vw;
+    font-size: 5vh;
+  }
+  #socialContent {
+    margin-left: 2%;
+  }
+  #socialContent img {
+    width: 7vh;
+    margin-top: 3%;
+    margin-right: 1vw;
+    transition: .3s;
+  }
+  #socialContent img:hover{
+    transform: translateY(-15%);
+  }
+  #RightCard {
+    width: 40%;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #RightCard img{
+    max-width: 25em; 
+    height: auto; 
+
+  }
+  #RightCard a{
+    margin-top: 10%;
+    font-size: 3vh;
+    font-weight: 900;
+  }
+
+  .ProjectCard{
+    width: 32vw;
+    height: 50vh !important;
+    max-height: none;
+  }
+  .ProjectCard img{
+    width: 30vw;
+  }
+  .ProjectCard p{
+    font-size: 2vh;
+  }
+  .ProjectCard a{
+    font-size: 2vh;
+    font-weight: 900;
+  }
+  #habilitiesTitle{
+    font-size: 6vh;
+  }
+  #habilitiesTitle + p{
+    font-size: 3.5vh;
+  }
+  #HabilitiesSection {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #HabilitiesSection div div{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: nowrap;
+    width: 25vw;
+    height: 25vh;
+  }
+  #areaCardHabilities{
+  display: flex;
+  justify-content: center;
+  flex-direction: row !important;
+  align-content: center;
+  align-items: center;
+  width: 80% !important;
+  align-self: center;
+  margin-top: 10%;
+  flex-wrap: wrap;
+}
+#areaCardHabilities div{
+  margin-left: 2vw;
+  font-size: 2.5vh;
+}
+
+#IdiomasCard p{
+ font-size: 4vh !important;
+}
+
+  #HabilitiesSection p{
+    margin-bottom: -15%;
+  }
+  #FrontEndCard h1{
+    margin-top: 1em;
+  }
+  #FrontEndCard span,#BackEndCard span,#FerramentasCard span, #IdiomasCard span{
+    display: inline-flex;
+    margin-bottom: 10%;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: 2vh;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 1vh;
+}
+  #FrontEndCard #StyleIcon, #figmaIcon{
+    align-self: center;
+    padding: 0;
+    width: 3.2vw;
+  }
+  #areaCardHabilities div .icon{
+    width: 3vw;
+  }
+  #figmaIcon{
+    align-self: center;
+    padding: 0;
+    width: 2.4vw !important;
+  }
+  #QualificationsSection ol {
+    list-style: none;
+    font-size: 3.5vw;
+  }
+  .dottedBar li:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    border-radius: 10px;
+  }
+  #areaToCards{
+    width: 100%;
+  }
+  #ProjectsSection{
+    width: 100%;
+  }
+  #ProjectsSection .cardTitle{
+    font-size: 6vh;
+  }
+  .ProjectCard{
+    width: 20vw;
+    height: 50vh;
+    margin-top: 5vh;
+    transition: 0.3s;
+  }
+  .ProjectCard img{
+    width: 20vw;
+    height: 30vh;
+    overflow: hidden;
+  }
+  .ProjectCard p{
+    margin-top: 2vh;
+    font-size: 3.5vh;
+  }
+  .ProjectCard a{
+    font-size: 3vh;
+    font-weight: 900;
+    transition: 0.2s;
+  }
+  .ProjectCard:hover{
+    transform:translateY(-5%);
+  
+  }
+  .ProjectCard a:hover{
+    transform: translateY(-5%);
+    background-color: rgba(255, 255, 255, 0.734);
+  }
+  #QualificationsSection ol {
+    list-style: none;
+    width: fit-content;
+    font-size: 2vw;
+  }
+  #QualificationsSection .cardTitle{
+    font-size: 5vh;
+  }
+
+  #ContactSection{
+    margin-top: 6vh;
+    margin-bottom: 15vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 60vw;
+  }
+  #ContactSection  .cardTitle{
+    font-size: 6vh;
+  }
+  #ContactSection span {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    height: 15vh;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+  }
+  #ContactSection span img{
+    width: 5vw;
+  }
+  #ContactSection p {
+    margin-top: -3%;
+    margin-bottom: 5%;
+    font-size: 4vh;
+  }
+  footer ul{
+    margin-top: 4vh;
+  }
+  footer ul li {
+    margin-bottom: 2.5vh;
+    font-size: 4vh;
+    transition: .3s;
+  }
+  footer ul li:hover{
+    font-size: 4.5vh;
+    transition: 0.3s;
+    text-shadow: white 3px 3px 50px;
+  }
+  footer h1 {
+    margin-bottom: 2.5vh;
+  }
+  #footerNote {
+    margin-top: 20%;
+    margin-bottom: -5%;
+    color: rgb(171, 171, 171);
+    font-style: italic;
+    font-size: 2.5vh;
   }
 }
