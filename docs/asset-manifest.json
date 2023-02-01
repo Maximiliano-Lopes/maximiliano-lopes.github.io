@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d5dce59.css",
-    "main.js": "/static/js/main.c500103a.js",
+    "main.css": "/static/css/main.d2ecf906.css",
+    "main.js": "/static/js/main.d4f8b68a.js",
     "static/media/backgroundImage.png": "/static/media/backgroundImage.5b2015fb7ffeb83ebc24.png",
     "static/media/canva-logo.png": "/static/media/canva-logo.23e39965387eb9d33807.png",
     "static/media/SaexImage.png": "/static/media/SaexImage.1213e7e582f6c6b173fb.png",
@@ -19,11 +19,11 @@
     "static/media/Figma-logo.svg": "/static/media/Figma-logo.0f4098dccb2a84e24331b00bc6a8dcf8.svg",
     "index.html": "/index.html",
     "static/media/CSS3_logo.svg": "/static/media/CSS3_logo.6ec1697a406483c72ccf775894d16777.svg",
-    "main.9d5dce59.css.map": "/static/css/main.9d5dce59.css.map",
-    "main.c500103a.js.map": "/static/js/main.c500103a.js.map"
+    "main.d2ecf906.css.map": "/static/css/main.d2ecf906.css.map",
+    "main.d4f8b68a.js.map": "/static/js/main.d4f8b68a.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d5dce59.css",
-    "static/js/main.c500103a.js"
+    "static/css/main.d2ecf906.css",
+    "static/js/main.d4f8b68a.js"
   ]
 }
