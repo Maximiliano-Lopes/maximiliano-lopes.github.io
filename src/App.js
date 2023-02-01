@@ -24,27 +24,81 @@ import EuroMilhoesImage from "./images/euromilhoesImage.png";
 import InterpretadorImage from "./images/tradutorMorseImage.png";
 import SaexImage from "./images/SaexImage.png";
 
+import EnglishTranslate from "./data/languages/en.json"
+  
+export function Translate(){
+    
+
+  function changeLang(){
+    var LangSelect = document.getElementById("LangSelect")
+    var portugueseCheck = document.getElementById("Portuguese")
+
+    var main = document.getElementById("mainID")
+    var nav = document.getElementById("AnchorNav")
+  
+    nav.classList.remove("blurEffect")
+    main.classList.remove("blurEffect")
+
+    if (portugueseCheck.checked == true){
+      LangSelect.style.cssText = 'display:none'
+
+      
+    }else{
+      
+      for(let id in EnglishTranslate){
+        let content = EnglishTranslate[id] 
+        document.getElementById(`${id}`).innerHTML = content     
+         
+    }
+    LangSelect.style.cssText = 'display: none'
+  }
+}
+
+  return(
+    <div id="LangSelect">
+        <p>Choose a language!</p>
+        <fieldset>
+        <div>
+          <input type="radio" id="Portuguese" name="drone" value="Portuguese" defaultChecked/>
+                
+          <label for="Portuguese">Português</label>
+        </div>
+
+        <div>
+          <input type="radio" id="English" name="drone" value="English"/>
+          <label for="English">English</label>
+        </div>
+    </fieldset>
+      <button onClick={changeLang}>Select</button>
+    </div>
+  )
+}
+
+
+
+
 function App() {
   return (
-    <div className="App">
-      <nav id="AnchorNav">
+    <div className="App" id="AppElement">
+      <Translate/>
+      <nav id="AnchorNav" className="blurEffect">
         <h1>&#60; Maximiliano /&#62;</h1>
         <ul>
           <li>
-            <a href="#HabilitiesSection">Habilidades</a>
+            <a href="#HabilitiesSection" id="HabilitiesNav">Habilidades</a>
           </li>
           <li>
-            <a href="#ProjectsSection">Projetos</a>
+            <a href="#ProjectsSection"  id="ProjectsNav">Projetos</a>
           </li>
           <li>
-            <a href="#QualificationsSection">Qualificações</a>
+            <a href="#QualificationsSection"  id="QualificationsNav">Qualificações</a>
           </li>
           <li>
-            <a href="#ContactSection">Contato</a>
+            <a href="#ContactSection"  id="ContactNav">Contato</a>
           </li>
         </ul>
       </nav>
-      <main>
+      <main id="mainID" className="blurEffect">
         <div id="firstCards">
           <div id="leftCard" className="backgroundCard">
             <p id="leftCardTitle" className="cardTitle">
@@ -52,7 +106,7 @@ function App() {
             </p>
             <p id="leftCardText">
               Sou um desenvolvedor front-end júnior em busca de oportunidades
-              para continuar desenvolvendo minhas habilidades e crescer
+              para continuar aprimorando minhas habilidades e crescer
               profissionalmente.
             </p>
             <span id="socialContent">
@@ -69,22 +123,22 @@ function App() {
           </div>
           <div id="RightCard" className="backgroundCard">
             <img src={ImageCard} />
-            <a className="btnShow" href="#ProjectsSection">Meus projetos</a>
+            <a className="btnShow" href="#ProjectsSection" id="myprojects">Meus projetos</a>
           </div>
         </div>
         <div id="HabilitiesSection">
           <h1 id="habilitiesTitle" className="cardTitle">Habilidades</h1>
-          <p>Nível técnico</p>
+          <p id="HabilitiesSubTitle">Nível técnico</p>
           <div id="areaCardHabilities">
             <div id="FrontEndCard" className="backgroundCard">
               <h1>Front-end</h1>
               <span>
-                <img src={HtmlIcom} className="icon" />
-                <img src={CssIcon} className="icon" />
-                <img src={JSIcon} className="icon" />
-                <img src={ReactIcon} className="icon" />
-                <img src={TsIcon} className="icon" />
-                <img src={StyleIcon} id="StyleIcon" className="icon" />
+                <img src={HtmlIcom} className="icon" alt="HTML"/>
+                <img src={CssIcon} className="icon" alt="CSS"/>
+                <img src={JSIcon} className="icon" alt="Javascript"/>
+                <img src={ReactIcon} className="icon" alt="React"/>
+                <img src={TsIcon} className="icon" alt="Typescript"/>
+                <img src={StyleIcon} id="StyleIcon" className="icon" alt="Styled Components"/>
               </span>
             </div>
             <div id="BackEndCard" className="backgroundCard">
@@ -95,25 +149,25 @@ function App() {
               </span>
             </div>
             <div id="FerramentasCard" className="backgroundCard">
-              <h1>Ferramentas</h1>
+              <h1 id="FerramentasCardTitle">Ferramentas</h1>
               <span>
-                <img src={OfficeIcon} className="icon" />
-                <img src={CanvaIcon} className="icon" />
-                <img src={GitIcon} className="icon" />
-                <img src={FigmaIcon} className="icon" id="figmaIcon"/>
+                <img src={OfficeIcon} className="icon" alt="Office 365"/>
+                <img src={CanvaIcon} className="icon" alt="Canva"/>
+                <img src={GitIcon} className="icon" alt="Git"/>
+                <img src={FigmaIcon} className="icon" id="figmaIcon" alt="Figma"/>
               </span>
             </div>
             <div id="IdiomasCard" className="backgroundCard">
-              <h1>Idiomas</h1>
+              <h1 id="IdiomasCardtitle">Idiomas</h1>
               <span>
-              <p>Português - C2<br/>
+              <p  id="textLanguages">Português - C2<br/>
               Inglês - B2</p>
               </span>
             </div>
           </div>
         </div>
         <div id="ProjectsSection">
-          <h1 className="cardTitle">Projetos</h1>
+          <h1 className="cardTitle" id="projectTitle">Projetos</h1>
           <div id="areaToCards">
             <div className="ProjectCard backgroundCard">
               <img src={PokedexImage} />
@@ -139,35 +193,35 @@ function App() {
         </div>
         <div id="QualificationsSection">
           <div id="AcademicExp">
-            <h1 className="cardTitle">Experiência Acadêmica</h1>
+            <h1 className="cardTitle" id="AcademicExpTitle">Experiência Acadêmica</h1>
             <ol className="dottedBar">
               <li className="backgroundCard">
                 <p>2019 - 2021</p>
-                <p>
+                <p id="SchoolText">
                   Ensino médio
                   <br />
                   Escola Técnica Estadual Parobé
                 </p>
               </li>
               <li className="backgroundCard">
-                <p>2021 Nov. - 2022 Maio </p>
-                <p>
+                <p id="DevTheDevsDate">2021 Nov. - 2022 Maio </p>
+                <p id="DevTheDevsText">
                   Dev the Dev's
                   <br />
                   Programação básica com Java.
                 </p>
               </li>
               <li className="backgroundCard">
-                <p>2022 Agosto - Atualmente</p>
-                <p>
+                <p id="ipMaiaDate">2022 Agosto - Atualmente</p>
+                <p id="ipMaiaText">
                   Instituto Politécnico da Maia
                   <br />
                   Licenciatura em Tecnologia da Informação, web e multimédia.
                 </p>
               </li>
               <li className="backgroundCard">
-                <p>2022 Nov. - Dez.</p>
-                <p>
+                <p id="OrangeTechDate">2022 Nov. - Dez.</p>
+                <p id="OrangeTechText">
                   Orange Tech+
                   <br />
                   Bootcamp promovido pelo Inter e DIO.
@@ -176,18 +230,18 @@ function App() {
             </ol>
           </div>
           <div id="ProfessionalExp" >
-            <h1 className="cardTitle">Experiência Profissional</h1>
+            <h1 className="cardTitle" id="ProfessionalExpTitle">Experiência Profissional</h1>
             <ol className="dottedBar">
               <li className="backgroundCard">
                 <p>2018 - 2020</p>
-                <p>
+                <p id="RefrigeracaoText">
                   Refrigeração Lopes <br />
                   Auxiliar técnico de lavadoras e refrigeração.
                 </p>
               </li>
               <li className="backgroundCard">
                 <p>2020 - 2022</p>
-                <p>
+                <p id="DvoskinkulkesText">
                   Dvoskinkulkes Joalheria <br />
                   Auxiliar administrativo
                 </p>
@@ -196,8 +250,8 @@ function App() {
           </div>
         </div>
         <div id="ContactSection">
-          <h1 className="cardTitle">Contatos</h1>
-          <p>Converse comigo!</p>
+          <h1 className="cardTitle" id="ContactTitle">Contatos</h1>
+          <p id="ContactMeText">Converse comigo!</p>
           <span id="ContactContent" className="backgroundCard">
             <a href="https://github.com/Monster1001" target="__blank">
               <img src={GitHubLogo} className="icon" />
@@ -215,19 +269,19 @@ function App() {
         <h1>&#60; Maximiliano /&#62;</h1>
         <ul>
           <li>
-            <a href="#AnchorNav">Início</a>
+            <a href="#AnchorNav" id="HomeLi">Início</a>
           </li>
           <li>
-            <a href="#HabilitiesSection">Habilidades</a>
+            <a href="#HabilitiesSection" id="Habilitiesli">Habilidades</a>
           </li>
           <li>
-            <a href="#ProjectsSection">Projetos</a>
+            <a href="#ProjectsSection" id="Projectsli">Projetos</a>
           </li>
           <li>
-            <a href="#QualificationsSection">Qualificações</a>
+            <a href="#QualificationsSection" id="Qualificationsli">Qualificações</a>
           </li>
           <li>
-            <a href="#ContactSection">Contato</a>
+            <a href="#ContactSection" id="Contactli">Contato</a>
           </li>
         </ul>
         <p id="footerNote">2023 - Maximiliano Lopes</p>
