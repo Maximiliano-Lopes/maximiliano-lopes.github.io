@@ -13,6 +13,7 @@ import StyleIcon from "./images/StyledComponents.jpg";
 
 import PhytonIcon from "./images/python-logo.png";
 import MySQLIcon from "./images/mysql-logo.png";
+import JavaIcon from "./images/JavaIcon.png";
 
 import OfficeIcon from "./images/Office_logo.png";
 import CanvaIcon from "./images/canva-logo.png";
@@ -23,6 +24,9 @@ import PokedexImage from "./images/pokedexImage.png";
 import EuroMilhoesImage from "./images/euromilhoesImage.png";
 import InterpretadorImage from "./images/tradutorMorseImage.png";
 import SaexImage from "./images/SaexImage.png";
+import JogoDaForcaImage from "./images/JogoDaForcaImage.png";
+
+
 
 import EnglishTranslate from "./data/languages/en.json"
   
@@ -39,7 +43,7 @@ export function Translate(){
     nav.classList.remove("blurEffect")
     main.classList.remove("blurEffect")
 
-    if (portugueseCheck.checked == true){
+    if (portugueseCheck.checked){
       LangSelect.style.cssText = 'display:none'
 
       
@@ -111,18 +115,18 @@ function App() {
             </p>
             <span id="socialContent">
               <a href="https://github.com/Monster1001" target="__blank">
-                <img src={GitHubLogo} className="icon" />
+                <img src={GitHubLogo} className="icon" alt="GitHub"/>
               </a>
               <a href="https://www.linkedin.com/in/maximilianomarqueslopes/" target="__blank">
-                <img src={LinkedinLogo} className="icon" />
+                <img src={LinkedinLogo} className="icon" alt="Linkedin"/>
               </a>
               <a href="mailto:maxlopes365@gmail.com?subject=Vi seu portfólio!&body=Olá! Quero conectar com você!" target="__blank">
-                <img src={EmailLogo} className="icon" />
+                <img src={EmailLogo} className="icon" alt="Gmail"/>
               </a>
             </span>
           </div>
           <div id="RightCard" className="backgroundCard">
-            <img src={ImageCard} />
+            <img src={ImageCard} alt="Using a PC."/>
             <a className="btnShow" href="#ProjectsSection" id="myprojects">Meus projetos</a>
           </div>
         </div>
@@ -144,8 +148,9 @@ function App() {
             <div id="BackEndCard" className="backgroundCard">
               <h1>Back-end</h1>
               <span>
-                <img src={PhytonIcon} className="icon" />
-                <img src={MySQLIcon} className="icon" />
+                <img src={PhytonIcon} className="icon" alt="Phyton" />
+                <img src={MySQLIcon} className="icon" alt="MySQL"  />
+                <img src={JavaIcon} className="icon"  alt="Java" />
               </span>
             </div>
             <div id="FerramentasCard" className="backgroundCard">
@@ -170,24 +175,29 @@ function App() {
           <h1 className="cardTitle" id="projectTitle">Projetos</h1>
           <div id="areaToCards">
             <div className="ProjectCard backgroundCard">
-              <img src={PokedexImage} />
+              <img src={PokedexImage} alt="Pokedex prévia."/>
               <p>Pokedéx</p>
-              <a className="btnShow" href="https://monster1001.github.io/Pokedex/" target="__blank">Ver</a>
+              <a className="btnShow" href="https://maximiliano-lopes.github.io/Pokedex/" target="__blank">Ver</a>
             </div>
             <div className="ProjectCard backgroundCard">
-              <img src={EuroMilhoesImage} />
+              <img src={EuroMilhoesImage} alt="EuroMilhões prévia."/>
               <p>Euro milhões</p>
-              <a className="btnShow" href="https://monster1001.github.io/euromilhoesReact/" target="__blank">Ver</a>
+              <a className="btnShow" href="https://maximiliano-lopes.github.io/euromilhoesReact/" target="__blank">Ver</a>
             </div>
             <div className="ProjectCard backgroundCard">
-              <img src={InterpretadorImage} />
-              <p>Tradutor Morse</p>
-              <a className="btnShow" href="https://monster1001.github.io/TradutorParaMorse/" target="__blank">Ver</a>
+              <img src={InterpretadorImage} alt="Interpretador Morse prévia."/>
+              <p id="morseTranslator">Tradutor Morse</p>
+              <a className="btnShow" href="https://maximiliano-lopes.github.io/TradutorParaMorse/" target="__blank">Ver</a>
             </div>
             <div className="ProjectCard backgroundCard">
-              <img src={SaexImage} />
+              <img src={SaexImage} alt="SAEX prévia."/>
               <p>SAEX</p>
               <a className="btnShow" href="https://www.saexaeronautica.com.br" target="__blank">Ver</a>
+            </div>
+            <div className="ProjectCard backgroundCard">
+              <img src={JogoDaForcaImage} alt="Jogo da Forca prévia."/>
+              <p id="hangman">Jogo da Forca</p>
+              <a className="btnShow" href="https://maximiliano-lopes.github.io/jogoDaForcaApp/" target="__blank">Ver</a>
             </div>
           </div>
         </div>
@@ -254,13 +264,13 @@ function App() {
           <p id="ContactMeText">Converse comigo!</p>
           <span id="ContactContent" className="backgroundCard">
             <a href="https://github.com/Monster1001" target="__blank">
-              <img src={GitHubLogo} className="icon" />
+              <img src={GitHubLogo} className="icon" alt="Github"/>
             </a>
             <a href="https://www.linkedin.com/in/maximilianomarqueslopes/" target="__blank">
-              <img src={LinkedinLogo} className="icon" />
+              <img src={LinkedinLogo} className="icon" alt="Linkedin"/>
             </a>
             <a href="mailto:maxlopes365@gmail.com?subject=Vi seu portfólio!&body=Olá! Quero conectar com você!" target="__blank">
-              <img src={EmailLogo} className="icon" />
+              <img src={EmailLogo} className="icon" alt="Gmail"/>
             </a>
           </span>
         </div>
